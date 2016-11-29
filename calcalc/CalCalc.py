@@ -1,4 +1,4 @@
-from sympy import simplify, evalf
+from sympy import simplify
 import requests
 from bs4 import BeautifulSoup
 
@@ -28,6 +28,25 @@ def calculate(str_expr, return_float=False):
                 return num_string
         else:
             return "I don't know the answer"
+
+
+def test_1():
+    assert abs(4. - calculate('2**2')) < .001
+
+def test_2():
+    assert abs(100. - calculate('2*3**2 * 5 + 10')) < .001
+
+def test_3():
+    mass = calculate('mass of the moon in kg',  return_float=True)
+    assert abs(mass - 7.3459e+22) / 7.3459e+22 < .001
+
+def test_4():
+    area = calculate('area of USA in square km',  return_float=True)
+    assert abs(area - 9631000) / 9631000  < .001
+
+def test_5():
+    height = calculate('height of Mount Alps in meter',  return_float=True)
+    assert abs(height - 3055) / 3055 < 0.01
 
 if __name__ == "__main__":
     import argparse
