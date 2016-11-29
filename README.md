@@ -1,7 +1,7 @@
 calcalc
 -------
-.. image::https://travis-ci.org/YuguangTong/CalCalc.svg?branch=master
-    :target: https://travis-ci.org/YuguangTong/CalCalc
+
+![Build logo](https://travis-ci.org/YuguangTong/CalCalc.svg?branch=master)
 
 Simple calculator based on `Sympy` and `Wolfram Alpha`
 - takes string input
@@ -9,10 +9,10 @@ Simple calculator based on `Sympy` and `Wolfram Alpha`
 - request Wolfram Alpha for more non-trivial strings
 
 **Example:**
-.. code-block:: python
-
+``` python
     >>> from calcalc.CalCalc import calculate
     >>> calculate('mass of the moon in kg',  return_float=True)
     7.3459e+22
     >>> calculate('2 * 3 ** 2 * 5 + 10')
     100
+```
