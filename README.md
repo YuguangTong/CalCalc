@@ -1,4 +1,7 @@
-# calcalc
+calcalc
+-------
+.. image::https://travis-ci.org/YuguangTong/CalCalc.svg?branch=master
+    :target: https://travis-ci.org/YuguangTong/CalCalc
 
 Simple calculator based on `Sympy` and `Wolfram Alpha`
 - takes string input
